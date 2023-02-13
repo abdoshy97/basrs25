@@ -1,0 +1,20 @@
+from tkinter import *
+import pyautogui
+root=Tk()
+root.title('test page')
+root.minsize(400,400)
+Label(text="User Name").place(x=10,y=10)
+e1=Entry()
+e1.place(x=100,y=10)
+Label(text="Password").place(x=10,y=50)
+e2=Entry()
+e2.place(x=100,y=50)
+def getname():
+    user=e1.get()
+    pas=e2.get()
+    Label(text="The user name is :-").place(x=10,y=120)
+    Label(text=user).place(x=150,y=120)
+    Label(text="The password is :-").place(x=10,y=160)
+    Label(text=pas).place(x=150,y=160)
+Button(text="Login",command=getname).place(x=150,y=80)
+mainloop()
